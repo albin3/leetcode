@@ -1,23 +1,17 @@
 #include <iostream>
-
+#include <string>
+#include <vector>
+#include <unordered_set>
+#include <stack>
 using namespace std;
 
-class LRUCache{
+class Solution {
 public:
-    LRUCache(int capacity) {
-        
-    }
-    
-    int get(int key) {
-        
-    }
-    
-    void set(int key, int value) {
-        
+    vector<string> wordBreak(string s, unordered_set<string> &dict) {
     }
 };
 
 int main() {
-  LRUCache * l = new LRUCache(2);
-  ;
+  string s="catsanddog";
+  unordered_set<string> = ["cats and dog", "cat sand dog"];
 }
