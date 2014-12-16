@@ -1,2 +1,2 @@
 hello:
-	g++ -g -o a.out a.cpp
+	g++ -std=c++11 -g -o a.out a.cpp
