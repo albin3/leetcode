@@ -9,23 +9,29 @@ using namespace std;
 class Solution {
 public:
     vector<string> result;
-    bool findWord(string s, stack<string> stk, int d, vector<vector<int> > v) {
+    void findWord(string s, stack<string> stk, int d, vector<vector<int> > v) {
       if (d==0) {
         // print stk;
-        return true;
+        string str = stk.top();
+        stk.pop();
+        while(!stk.empty()) {
+          str += " ";
+          str += stk.top();
+          stk.pop();
+        }
+        result.push_back(str);
       } else {
         int i;
         for (i=0; i<v[d].size(); i++) {
           int next = v[d][i];
           stk.push(s.substr(next, d-next));
-          if (findWord(s, stk, next, v))
-            return true;
+          findWord(s, stk, next, v);
           stk.pop();
         }
-        return false;
       }
     }
-    bool wordBreak(string s, unordered_set<string> &dict) {
+    vector<string> wordBreak(string s, unordered_set<string> &dict) {
+      vector<string> vs;
       vector<vector<int> > v(s.length()+1);
       int i=0,j=1;
       for (i=0; i<s.length(); i++) {
@@ -36,8 +42,16 @@ public:
           }
         }
       }
+      for (i=0; i<v.size(); i++) {
+        cout<<"line "<<i<<" :";
+        for (j=0; j<v[i].size(); j++) {
+          cout<<v[i][j]<<",";
+        }
+        cout<<endl;
+      }
       stack<string> stks;
-      return findWord(s, stks, s.length(), v);
+      findWord(s, stks, s.length(), v);
+      return result;
     }
 };
 
