@@ -1,6 +1,7 @@
 // Source : https://leetcode.com/problems/longest-substring-without-repeating-characters/
 // Author : Albin. Zeng
 // Date   : 2015-04-10
+// References : http://www.geeksforgeeks.org/median-of-two-sorted-arrays/
 
 /*****************************************************************************************
  *
