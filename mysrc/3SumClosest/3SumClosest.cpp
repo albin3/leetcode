@@ -43,7 +43,7 @@ public:
           int sum = num[l]+num[r];
           // update.
           if (getDistance(sum, t) < most_close) {
-            mose_close = getDistance(sum, t);
+            most_close = getDistance(sum, t);
             result = sum+num[i];
           }
           if (sum==t) {
