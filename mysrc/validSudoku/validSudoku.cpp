@@ -22,7 +22,7 @@ using namespace std;
 
 class Solution {
 public:
-    // TODO: 别人用内存换时间的算法值得学习
+    // TODO: 别人用内存换时间的算法值得学习.
     bool isValidSudoku(vector<vector<char> > &board) {
 
       int len = board.size();
