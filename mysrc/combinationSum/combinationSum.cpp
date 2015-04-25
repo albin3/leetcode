@@ -22,7 +22,7 @@
  ********************************************************************************/
 
 #include <iostream>
-#include <agorithm>
+#include <algorithm>
 #include <vector>
 using namespace std;
 
@@ -40,9 +40,11 @@ public:
       return result;
     }
 
-    void solveHelper(vector<vector<int> > &r, vector<int> &c, int pos, vector<int> p, int target) {
+    void solveHelper(vector<vector<int> > &r, vector<int> &c, int pos, vector<int> &p, int target) {
 
       for (int i=pos; i<c.size(); i++) {
+          vector<int> tmp = p;
+          tmp.push_back(c[i]);
 
         if (c[i] < target) {
           vector<int> tmp = p;
@@ -51,8 +53,6 @@ public:
           continue;
 
         } else if (c[i] == target) {
-          vector<int> tmp = p;
-          tmp.push_back(c[i]);
           r.push_back(tmp);
           return;
 
