@@ -1,3 +1,9 @@
+// Source : https://leetcode.com/problems/unique-binary-search-trees/
+// Author : Albin Zeng
+// Date : 2015-08-12
+
+//输入n，返回包含n个元素，然后符合二叉搜索树的总个数
+
 #include <iostream>
 #include <vector>
 using namespace std;
